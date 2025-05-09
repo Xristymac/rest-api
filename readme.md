@@ -1,8 +1,16 @@
-# Simple REST API with Express.js
+# 🛠️ Simple REST API with Express.js
 
 ## 📄 Description
 
-This is a simple REST API built with **Express.js** that demonstrates basic CRUD operations on items. The API includes routes for retrieving, creating, updating, and deleting items, along with error handling and data validation.
+This is a simple REST API built with **Express.js** that demonstrates the core features of a backend service, including:
+
+- RESTful routing
+- Full CRUD functionality
+- In-memory data storage
+- Request validation
+- Error handling
+
+It allows users to create, read, update, and delete items.
 
 ---
 
@@ -10,25 +18,12 @@ This is a simple REST API built with **Express.js** that demonstrates basic CRUD
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Xristymac/my-rest-api.git
-   cd my-rest-api
-   ```
+   git clone https://github.com/Xristymac/rest-api.git
+   cd rest-api
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+npm install
 
-3. **Start the server**:
-   ```bash
-   node app.js
-   ```
-
-   The server will run at [http://localhost:3000](http://localhost:3000)
-
----
-
-## 🧪 Example API Requests
+node app.js
 
 - **POST /items** (Create an item)
   ```json
@@ -40,6 +35,38 @@ This is a simple REST API built with **Express.js** that demonstrates basic CRUD
 **PUT /items/:id** (Update an item)
 ```json
 {
-    "name": "Updated Book",
-    "description": "A better read"
+  "name": "Book",
+  "description": "A good read"
 }
+
+{
+  "id": 1,
+  "name": "Book",
+  "description": "A good read"
+}
+
+{
+  "name": "Updated Book",
+  "description": "A better read"
+}
+
+{
+  "id": 1,
+  "name": "Updated Book",
+  "description": "A better read"
+}
+
+{
+  "message": "Item deleted successfully."
+}
+
+{
+  "error": "Name and description are required."
+}
+
+{
+  "error": "Item not found."
+}
+
+
+---
